@@ -1,76 +1,69 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
 body {
-  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f2f2f2;
   color: #333;
-  line-height: 1.6;
 }
 
 header {
-  background-color: #003366;
+  background: #004aad;
   color: white;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 20px;
 }
 
-header h1 {
-  font-size: 2rem;
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
 }
 
-.servicios, .planes {
-  padding: 2rem;
+.planes {
+  padding: 20px;
   text-align: center;
 }
 
-.servicios ul {
-  list-style: none;
-  padding: 1rem;
+.planes h2 {
+  margin-bottom: 20px;
 }
 
-.servicios li {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-table {
-  margin: 1rem auto;
-  width: 90%;
-  max-width: 600px;
-  border-collapse: collapse;
+.card {
   background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-table th, table td {
-  padding: 1rem;
-  border: 1px solid #ccc;
+.destacado {
+  border: 2px solid #004aad;
 }
 
-table th {
-  background-color: #003366;
+.precio {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #004aad;
+  margin: 15px 0;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background: #25d366;
   color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebd5d;
 }
 
 footer {
-  background-color: #222;
+  background: #222;
   color: white;
   text-align: center;
-  padding: 1rem;
-}
-
-.btn-whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: white;
-  font-size: 1.5rem;
-  padding: 10px 14px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  padding: 10px;
 }
