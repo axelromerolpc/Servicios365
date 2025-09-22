@@ -1,69 +1,26 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f2f2f2;
-  color: #333;
+/* styles.css - clases personalizadas */
+
+
+.hero-gradient {
+background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 60%, #f59e0b 100%);
 }
 
-header {
-  background: #004aad;
-  color: white;
-  text-align: center;
-  padding: 20px;
+
+.btn-primary {
+background: linear-gradient(90deg, #1e3a8a 0%, #f59e0b 100%);
+color: white;
+transition: transform .15s ease, box-shadow .15s ease;
 }
 
-.logo {
-  width: 80px;
-  margin-bottom: 10px;
-}
 
-.planes {
-  padding: 20px;
-  text-align: center;
-}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
 
-.planes h2 {
-  margin-bottom: 20px;
-}
 
-.card {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 400px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+/* Tarjetas, testimonios y FAQ */
+.testimonial-card { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
 
-.destacado {
-  border: 2px solid #004aad;
-}
 
-.precio {
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #004aad;
-  margin: 15px 0;
-}
-
-.whatsapp-btn {
-  display: inline-block;
-  background: #25d366;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.whatsapp-btn:hover {
-  background: #1ebd5d;
-}
-
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 10px;
+/* Detalles responsivos menores */
+@media (max-width: 768px) {
+.hero-gradient { padding: 6rem 1rem; }
 }
