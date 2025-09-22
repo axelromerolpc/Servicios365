@@ -1,26 +1,62 @@
-/* styles.css - clases personalizadas */
+/* ==============================
+   Estilos personalizados
+   ============================== */
 
-
-.hero-gradient {
-background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 60%, #f59e0b 100%);
+/* Fuente base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-.btn-primary {
-background: linear-gradient(90deg, #1e3a8a 0%, #f59e0b 100%);
-color: white;
-transition: transform .15s ease, box-shadow .15s ease;
+/* Navbar fijo */
+nav {
+  backdrop-filter: blur(6px);
 }
 
+/* Hero */
+#hero h2 {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+#hero p {
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
 
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+/* Botones */
+button, a {
+  transition: transform 0.2s ease-in-out;
+}
+button:hover, a:hover {
+  transform: scale(1.05);
+}
 
+/* FAQ */
+#faq h4 {
+  color: #1e3a8a; /* azul oscuro */
+  margin-bottom: 0.5rem;
+}
+#faq p {
+  color: #374151; /* gris neutro */
+}
 
-/* Tarjetas, testimonios y FAQ */
-.testimonial-card { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+/* Formulario simulador */
+#loanForm input, 
+#loanForm select {
+  outline: none;
+  border: 2px solid #d1d5db; /* gris claro */
+}
+#loanForm input:focus, 
+#loanForm select:focus {
+  border-color: #1e3a8a;
+  box-shadow: 0 0 5px rgba(30, 58, 138, 0.5);
+}
 
+/* Botón WhatsApp flotante */
+.fixed a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-/* Detalles responsivos menores */
-@media (max-width: 768px) {
-.hero-gradient { padding: 6rem 1rem; }
+/* Animaciones */
+[data-aos] {
+  transition-property: transform, opacity;
 }
