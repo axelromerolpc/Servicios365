@@ -1,56 +1,517 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Servicios 365</title>
-  <link rel="stylesheet" href="estilos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La Casa del Empeño en La Rioja. Préstamos rápidos y seguros con garantía de autos, motos, joyas, electrodomésticos y más. Confianza y transparencia.">
+  <title>La Casa del Empeño - La Rioja</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (animaciones) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Styles local -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon (añadí tu archivo) -->
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
 </head>
-<body>
-  <header>
-    <img src="logo.png" alt="Logo Servicios 365" class="logo" />
-    <h1>Servicios 365</h1>
-    <p>Asistencia técnica 24/7 en plomería, electricidad y cerrajería</p>
+<body class="font-sans antialiased text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-3">
+          <div class="text-blue-900 text-2xl font-bold">La Casa del Empeño</div>
+        </div>
+        <nav class="hidden md:flex items-center space-x-6 text-gray-700">
+          <a href="#servicios" class="hover:text-yellow-500">Servicios</a>
+          <a href="#simulador" class="hover:text-yellow-500">Simulador</a>
+          <a href="#testimonios" class="hover:text-yellow-500">Testimonios</a>
+          <a href="#faq" class="hover:text-yellow-500">FAQ</a>
+          <a href="#contacto" class="hover:text-yellow-500">Contacto</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" aria-label="Abrir menú">☰</button>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <section class="planes">
-    <h2>Planes de Suscripción</h2>
-    <div class="card">
-      <h3>Plan Básico</h3>
-      <p>✔ Ideal para departamentos pequeños</p>
-      <p>✔ Atención dentro de las 24 horas</p>
-      <p>✔ 3 soluciones mensuales</p>
-      <p>✔ Atención remota vía WhatsApp</p>
-      <p>✔ Solución técnica garantizada</p>
-      <p class="precio">$8.000/mes</p>
-      <a class="whatsapp-btn" target="_blank" href="https://wa.me/543804378337?text=Hola%2C%20quiero%20contratar%20el%20Plan%20B%C3%A1sico%20de%20Servicios%20365.">Solicitar Plan Básico</a>
-    </div>
-
-    <div class="card destacado">
-      <h3>Plan Premium</h3>
-      <p>✔ Ideal para consultorios, edificios y locales</p>
-      <p>✔ Atenciones ilimitadas</p>
-      <p>✔ Soluciones en menos de 3 horas</p>
-      <p>✔ Prioridad en emergencias</p>
-      <p>✔ 15% de descuento en trabajos externos</p>
-      <p class="precio">$12.000/mes</p>
-      <a class="whatsapp-btn" target="_blank" href="https://wa.me/543804378337?text=Hola%2C%20quiero%20contratar%20el%20Plan%20Premium%20de%20Servicios%20365.">Solicitar Plan Premium</a>
-    </div>
-
-    <div class="card">
-      <h3>Plan Familiar</h3>
-      <p>✔ Pensado para casas grandes o familias numerosas</p>
-      <p>✔ Atención rápida 24/7</p>
-      <p>✔ 6 soluciones mensuales</p>
-      <p>✔ Cobertura extendida en zonas aledañas</p>
-      <p>✔ 20% de descuento en trabajos externos</p>
-      <p class="precio">$20.000/mes</p>
-      <a class="whatsapp-btn" target="_blank" href="https://wa.me/543804378337?text=Hola%2C%20quiero%20contratar%20el%20Plan%20Familiar%20de%20Servicios%20365.">Solicitar Plan Familiar</a>
+  <!-- HERO -->
+  <section class="hero-gradient text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Soluciones financieras rápidas y seguras</h1>
+      <p class="text-xl mb-6">Empeñá con confianza: motos, autos, electrodomésticos, joyas y más.</p>
+      <a href="#simulador" class="btn-primary inline-block px-6 py-3 rounded-lg font-bold">Calcular préstamo</a>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Servicios 365 - Todos los derechos reservados</p>
+  <!-- SERVICIOS -->
+  <section id="servicios" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">Nuestros servicios</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow" data-aos="fade-up">
+          <h3 class="font-bold text-lg">Empeño de vehículos</h3>
+          <p class="text-gray-600 mt-2">Préstamos con garantía de motos y autos, valoración profesional y trato transparente.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="font-bold text-lg">Electrónicos y herramientas</h3>
+          <p class="text-gray-600 mt-2">Celulares, notebooks, electrodomésticos y herramientas con aprobación rápida.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="font-bold text-lg">Joyas y artículos de valor</h3>
+          <p class="text-gray-600 mt-2">Tasas preferenciales y seguridad en custodia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULADOR -->
+  <section id="simulador" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-6">Simulador de préstamos</h2>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <form id="formSimulador" class="space-y-4">
+          <div>
+            <label class="block font-medium mb-1">Tipo de artículo</label>
+            <select id="articulo" class="w-full border rounded px-3 py-2">
+              <option value="moto">Moto</option>
+              <option value="auto">Auto</option>
+              <option value="electrodomestico">Electrodoméstico</option>
+              <option value="celular">Celular</option>
+              <option value="joya">Joya</option>
+              <option value="herramienta">Herramienta</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-medium mb-1">Valor estimado del artículo (ARS)</label>
+            <input id="valor" type="number" min="0" step="1" class="w-full border rounded px-3 py-2" placeholder="Ej: 200000">
+          </div>
+
+          <div>
+            <label class="block font-medium mb-1">Plazo (meses)</label>
+            <input id="plazo" type="number" min="1" step="1" class="w-full border rounded px-3 py-2" placeholder="Ej: 1">
+          </div>
+
+          <div class="flex gap-3">
+            <button type="submit" class="btn-primary px-4 py-2 rounded font-bold">Calcular</button>
+            <button type="button" id="resetSim" class="px-4 py-2 rounded border">Limpiar</button>
+          </div>
+        </form>
+
+        <div id="resultado" class="mt-6 hidden bg-yellow-50 border border-yellow-200 rounded p-4">
+          <!-- Aquí se inyectan resultados por JS -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS (ejemplo) -->
+  <section id="testimonios" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Testimonios</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded shadow">"Me ayudaron rápido con la moto" — Juan P.</div>
+        <div class="bg-white p-6 rounded shadow">"Recibí mi dinero en el acto" — María G.</div>
+        <div class="bg-white p-6 rounded shadow">"Atención clara y profesional" — Carlos R.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ corta -->
+  <section id="faq" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-6">Preguntas frecuentes</h2>
+      <div class="space-y-4">
+        <details class="p-4 bg-white rounded shadow"><summary class="font-semibold">¿Qué puedo empeñar?</summary><p class="mt-2 text-gray-600">Autos, motos, electrodomésticos, celulares, joyas y herramientas.</p></details>
+        <details class="p-4 bg-white rounded shadow"><summary class="font-semibold">¿Qué documentos necesito?</summary><p class="mt-2 text-gray-600">DNI; para vehículos cédula y título.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-16 bg-gray-900 text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4">Contacto</h2>
+      <p>Av. San Martín 1234, La Rioja · +54 3804 123456 · contacto@lacasadelempeño.com.ar</p>
+
+      <form id="contactForm" class="mt-6 bg-white text-gray-800 p-6 rounded shadow">
+        <input type="text" id="cNombre" placeholder="Nombre completo" class="w-full border rounded px-3 py-2 mb-3" required>
+        <input type="tel" id="cTelefono" placeholder="Teléfono" class="w-full border rounded px-3 py-2 mb-3" required>
+        <input type="email" id="cEmail" placeholder="Email" class="w-full border rounded px-3 py-2 mb-3">
+        <textarea id="cMensaje" rows="4" placeholder="Mensaje" class="w-full border rounded px-3 py-2 mb-3" required></textarea>
+        <button type="submit" class="btn-primary px-4 py-2 rounded font-bold">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white py-8 text-center">
+    <p>© 2025 La Casa del Empeño</p>
   </footer>
+
+  <!-- BOTON WHATSAPP -->
+  <a href="https://wa.me/543804123456" target="_blank" class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-lg">
+    WhatsApp
+  </a>
+
+  <!-- SCRIPTS EXTERNOS (AOS, Feather) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- firebase-config.js (opcional) -->
+  <!-- Si vas a usar Firebase, edita js/firebase-config.js y luego incluye este script (type="module") -->
+  <script type="module" src="js/firebase-config.js"></script>
+
+  <!-- Script principal -->
+  <script src="js/script.js"></script>
+
+  <script>
+    // Inicializaciones simples
+    AOS.init();
+    if (window.feather) feather.replace();
+  </script>
 </body>
 </html>
+```
+
+---
+
+## css/styles.css
+
+```css
+/* styles.css - clases personalizadas */
+
+.hero-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 60%, #f59e0b 100%);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #1e3a8a 0%, #f59e0b 100%);
+  color: white;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+
+/* Tarjetas, testimonios y FAQ */
+.testimonial-card { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+
+/* Detalles responsivos menores */
+@media (max-width: 768px) {
+  .hero-gradient { padding: 6rem 1rem; }
+}
+```
+
+---
+
+## js/firebase-config.js  (OPCIONAL — **editar** si querés guardar solicitudes en Firestore)
+
+> **Instrucciones:**
+>
+> 1. Crea un proyecto en Firebase Console ([https://console.firebase.google.com/](https://console.firebase.google.com/)).
+> 2. Crea una App web en tu proyecto y copia la configuración (apiKey, authDomain, projectId, etc.).
+> 3. En este archivo, reemplaza el objeto `firebaseConfig` con tus credenciales.
+> 4. Asegurate de habilitar Firestore en el proyecto.
+
+```javascript
+// firebase-config.js (tipo módulo)
+
+// --- EDITA AQUÍ: copia tu configuración de Firebase entre llaves ---
+const firebaseConfig = {
+  // apiKey: "TU_API_KEY",
+  // authDomain: "TU_PROYECTO.firebaseapp.com",
+  // projectId: "TU_PROJECT_ID",
+  // storageBucket: "TU_PROJECT_ID.appspot.com",
+  // messagingSenderId: "SENDER_ID",
+  // appId: "APP_ID"
+};
+
+// Si dejás el objeto vacío, no se intentará guardar nada.
+const FIREBASE_ENABLED = Object.keys(firebaseConfig).length > 0;
+
+if (FIREBASE_ENABLED) {
+  // Usamos módulos CDN de Firebase (v9 modular)
+  import('https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js').then(({ initializeApp }) => {
+    return Promise.all([
+      initializeApp(firebaseConfig),
+      import('https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js')
+    ]);
+  }).then(([_app, firestoreModule]) => {
+    const { getApp } = await import('https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js');
+  }).catch(err => console.warn('Error cargando Firebase:', err));
+
+  // MUESTRA: definimos una función global `saveSubmission(data)` que el script principal llamará
+  // (aquí abajo hay un ejemplo de implementación con Firestore modular)
+}
+
+// Nota: para evitar problemas de imports dinámicos en navegadores antiguos, otra opción es
+// incluir los scripts de Firebase en index.html desde los CDNs oficiales.
+
+/*
+Ejemplo (sugerido) de implementación dentro del bloque FIREBASE_ENABLED:
+
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js';
+import { getFirestore, collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js';
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+window.saveSubmission = async function(data) {
+  try {
+    const docRef = await addDoc(collection(db, 'solicitudes'), {...data, createdAt: serverTimestamp()});
+    return { success: true, id: docRef.id };
+  } catch (e) {
+    return { success: false, error: e.message };
+  }
+};
+*/
+
+// Si no configurás Firebase, el script principal usará un fallback (mailto) para "enviar".
+```
+
+---
+
+## js/script.js
+
+```javascript
+// script.js - comportamiento principal
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile menu (simple)
+  const mobileBtn = document.getElementById('mobile-menu-button');
+  if (mobileBtn) {
+    mobileBtn.addEventListener('click', () => {
+      // Este ejemplo es muy simple: podrías crear un menú desplegable si lo necesitás
+      alert('Activá el menú móvil si querés una versión completa para celular.');
+    });
+  }
+
+  // Formulário simulador
+  const form = document.getElementById('formSimulador');
+  const resultadoDiv = document.getElementById('resultado');
+  const resetBtn = document.getElementById('resetSim');
+
+  const numberFormat = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' });
+
+  const LOAN_PERCENTAGES = {
+    moto: 0.6,
+    auto: 0.5,
+    electrodomestico: 0.5,
+    celular: 0.55,
+    joya: 0.7,
+    herramienta: 0.45,
+    default: 0.6
+  };
+
+  const MONTHLY_INTEREST = {
+    moto: 0.10,
+    auto: 0.08,
+    electrodomestico: 0.12,
+    celular: 0.15,
+    joya: 0.07,
+    herramienta: 0.12,
+    default: 0.10
+  };
+
+  function formatCurrency(v) { return numberFormat.format(v); }
+
+  function calcularPrestamo(tipo, valor, plazo) {
+    const pct = LOAN_PERCENTAGES[tipo] ?? LOAN_PERCENTAGES.default;
+    const interes = MONTHLY_INTEREST[tipo] ?? MONTHLY_INTEREST.default;
+
+    const montoPrestamo = valor * pct;
+    // Interés simple
+    const totalDevolverSimple = montoPrestamo * (1 + interes * plazo);
+    const cuotaSimple = totalDevolverSimple / plazo;
+
+    // Cuota con formula de cuota fija (si querés amortizar a tasa mensual compuesta)
+    let cuotaAnualizada = null;
+    if (interes > 0) {
+      const r = interes; // mensual
+      const n = plazo;
+      const factor = Math.pow(1 + r, n);
+      const cuota = montoPrestamo * (r * factor) / (factor - 1);
+      cuotaAnualizada = cuota;
+    }
+
+    return {
+      montoPrestamo,
+      interesMensual: interes,
+      totalDevolverSimple,
+      cuotaSimple,
+      cuotaConAmortizacion: cuotaAnualizada
+    };
+  }
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const tipo = document.getElementById('articulo').value;
+    const valor = parseFloat(document.getElementById('valor').value);
+    const plazo = parseInt(document.getElementById('plazo').value, 10);
+
+    if (!tipo || isNaN(valor) || valor <= 0 || isNaN(plazo) || plazo <= 0) {
+      alert('Por favor completá todos los campos con valores válidos.');
+      return;
+    }
+
+    const res = calcularPrestamo(tipo, valor, plazo);
+
+    // Construir HTML de resultado
+    let html = `
+      <h3 class="font-bold">Resultado</h3>
+      <div class="mt-2">
+        <p><strong>Valor estimado del artículo:</strong> ${formatCurrency(valor)}</p>
+        <p><strong>Monto del préstamo estimado:</strong> ${formatCurrency(res.montoPrestamo)}</p>
+        <p><strong>Interés mensual aplicado:</strong> ${(res.interesMensual * 100).toFixed(1)}%</p>
+        <p><strong>Plazo:</strong> ${plazo} mes(es)</p>
+        <p><strong>Total a devolver (interés simple):</strong> ${formatCurrency(res.totalDevolverSimple)}</p>
+        <p><strong>Cuota promedio (simple):</strong> ${formatCurrency(res.cuotaSimple)}</p>
+    `;
+
+    if (res.cuotaConAmortizacion) {
+      html += `<p><strong>Cuota estimada (amortización fija):</strong> ${formatCurrency(res.cuotaConAmortizacion)}</p>`;
+    }
+
+    // Botón para completar datos y enviar solicitud
+    html += `
+      <div class="mt-4">
+        <button id="btnMostrarForm" class="px-4 py-2 rounded bg-blue-700 text-white">Enviar solicitud</button>
+      </div>
+    `;
+
+    html += `</div>`;
+
+    resultadoDiv.innerHTML = html;
+    resultadoDiv.classList.remove('hidden');
+
+    // Listener para botón enviar datos
+    const btnMostrar = document.getElementById('btnMostrarForm');
+    btnMostrar?.addEventListener('click', () => {
+      mostrarFormularioEnvio({ tipo, valor, plazo, ...res });
+    });
+  });
+
+  resetBtn?.addEventListener('click', () => {
+    form.reset();
+    resultadoDiv.innerHTML = '';
+    resultadoDiv.classList.add('hidden');
+  });
+
+  // Mostrar pequeño formulario dentro del resultado para que el cliente deje sus datos
+  function mostrarFormularioEnvio(resultadoObj) {
+    const htmlForm = `
+      <h4 class="font-semibold mt-4">Completá tus datos</h4>
+      <form id="solicitudForm" class="mt-3 space-y-3">
+        <input id="nombreSolicitante" type="text" placeholder="Nombre completo" class="w-full border rounded px-3 py-2" required>
+        <input id="telefonoSolicitante" type="tel" placeholder="Teléfono" class="w-full border rounded px-3 py-2" required>
+        <input id="emailSolicitante" type="email" placeholder="Email (opcional)" class="w-full border rounded px-3 py-2">
+        <textarea id="descripcionSolicitante" rows="3" placeholder="Detalles del artículo" class="w-full border rounded px-3 py-2"></textarea>
+        <div class="flex gap-2">
+          <button type="submit" class="btn-primary px-4 py-2 rounded text-white">Enviar solicitud</button>
+          <button type="button" id="cancelSolicitud" class="px-4 py-2 border rounded">Cancelar</button>
+        </div>
+      </form>
+    `;
+
+    resultadoDiv.insertAdjacentHTML('beforeend', htmlForm);
+
+    document.getElementById('cancelSolicitud')?.addEventListener('click', () => {
+      // Remover form
+      const formNode = document.getElementById('solicitudForm');
+      formNode?.remove();
+    });
+
+    const solicitudForm = document.getElementById('solicitudForm');
+    solicitudForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const nombre = document.getElementById('nombreSolicitante').value.trim();
+      const telefono = document.getElementById('telefonoSolicitante').value.trim();
+      const email = document.getElementById('emailSolicitante').value.trim();
+      const descripcion = document.getElementById('descripcionSolicitante').value.trim();
+
+      if (!nombre || !telefono) {
+        alert('Por favor completá nombre y teléfono.');
+        return;
+      }
+
+      const payload = {
+        nombre, telefono, email, descripcion,
+        tipo: resultadoObj.tipo,
+        valorEstimado: resultadoObj.valor,
+        montoPrestamo: resultadoObj.montoPrestamo,
+        plazoMeses: resultadoObj.plazo,
+        interesMensual: resultadoObj.interesMensual,
+        totalDevolver: resultadoObj.totalDevolverSimple,
+        enviadoDesde: 'web'
+      };
+
+      // Intentar guardar con Firebase si existe la función global saveSubmission
+      if (window.saveSubmission && typeof window.saveSubmission === 'function') {
+        try {
+          const result = await window.saveSubmission(payload);
+          if (result && result.success) {
+            alert('Solicitud enviada correctamente. ID: ' + result.id);
+            // limpiar
+            solicitudForm.reset();
+          } else {
+            throw new Error(result.error || 'Error desconocido');
+          }
+        } catch (err) {
+          console.error(err);
+          alert('No se pudo guardar en la nube. Se abrirá tu correo para enviar los datos.');
+          enviarPorMailFallback(payload);
+        }
+      } else {
+        // Fallback: abrir mailto con los datos
+        enviarPorMailFallback(payload);
+      }
+    });
+  }
+
+  function enviarPorMailFallback(payload) {
+    const to = 'contacto@lacasadelempeño.com.ar';
+    const subject = `Solicitud de préstamo - ${payload.nombre}`;
+    const body = `Nombre: ${payload.nombre}\nTeléfono: ${payload.telefono}\nEmail: ${payload.email}\nTipo: ${payload.tipo}\nValor estimado: ${payload.valorEstimado}\nMonto estimado: ${payload.montoPrestamo}\nPlazo (meses): ${payload.plazoMeses}\nInterés mensual: ${payload.interesMensual}\nComentarios: ${payload.descripcion}`;
+
+    const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+  }
+
+  // Contact form (simple comportamiento: abrir mailto si no hay backend)
+  const contactForm = document.getElementById('contactForm');
+  contactForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nombre = document.getElementById('cNombre').value.trim();
+    const telefono = document.getElementById('cTelefono').value.trim();
+    const email = document.getElementById('cEmail').value.trim();
+    const mensaje = document.getElementById('cMensaje').value.trim();
+
+    if (!nombre || !telefono || !mensaje) { alert('Completá los campos requeridos'); return; }
+
+    const body = `Nombre: ${nombre}\nTeléfono: ${telefono}\nEmail: ${email}\nMensaje: ${mensaje}`;
+    const mailto = `mailto:contacto@lacasadelempeño.com.ar?subject=${encodeURIComponent('Contacto desde web - ' + nombre)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+  });
+
+});
+```
+
+---
+
+## .gitignore
+
+```gitignore
+/node_modules
+/dist
+.env
+.DS_Store
+``
